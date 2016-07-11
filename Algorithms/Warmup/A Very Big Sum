@@ -1,0 +1,24 @@
+https://www.hackerrank.com/challenges/a-very-big-sum
+
+
+import java.io.*;
+import java.util.*;
+
+public class VeryBigSum {
+
+    public static void main(String[] args) {
+       
+        Scanner scan = new Scanner(System.in);
+        scan.nextLine();
+        String[]numArray = scan.nextLine().split(" ");
+        
+        long sum = 0;
+        for(String num:numArray) {
+            if(!num.equals("")){
+                sum+=Long.parseLong(num);
+            }
+        }
+        System.out.println(sum);
+        scan.close();
+    }
+}

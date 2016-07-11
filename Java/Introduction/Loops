@@ -1,0 +1,26 @@
+https://www.hackerrank.com/challenges/java-loops
+
+
+import java.util.Scanner;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int t = scan.nextInt();
+
+        for (int i = 0; i < t; i++) {
+            int a = scan.nextInt();
+            int b = scan.nextInt();
+            int n = scan.nextInt();
+            int pow = 1;
+            int x = a;
+            for (int j = 0; j<n; j++) {
+                x = x + (pow << j) * b;
+                System.out.printf("%d ", x);
+            }
+            System.out.println();
+        }
+        scan.close();
+    }
+}
