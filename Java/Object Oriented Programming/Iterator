@@ -1,0 +1,37 @@
+https://www.hackerrank.com/challenges/java-iterator
+
+
+import java.util.*;
+
+public class Main {
+   static Iterator func(ArrayList mylist) {
+      Iterator it = mylist.iterator();
+      while(it.hasNext()) {
+         Object element = it.next();
+         if(element instanceof String)
+            break;
+      }
+      return it;
+   }
+
+   public static void main(String []argh) {
+      ArrayList mylist = new ArrayList();
+      Scanner scan=new Scanner(System.in);
+      int n=scan.nextInt();
+      int m=scan.nextInt();
+      for(int i=0; i<n; i++) {
+         mylist.add(scan.nextInt());
+      }
+      mylist.add("###");
+      
+      for(int i=0; i<m; i++) {
+         mylist.add(scan.next());
+      }
+                  
+      Iterator it=func(mylist);
+      while(it.hasNext()) {
+         Object element = it.next();
+         System.out.println((String)element);
+      }
+   }
+}
